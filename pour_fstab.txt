@@ -1,0 +1,26 @@
+
+sudo blkid | grep DATA
+
+/dev/sdb1: LABEL="DATA" UUID="56242B3E242B208B" TYPE="ntfs" PARTUUID="000ae7ed-01"
+
+
+
+
+
+
+/dev/sda5: LABEL="USER_FOLDERS" BLOCK_SIZE="512" UUID="7CFC8992FC8946FC" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="40bf21bc-91a0-438b-88a5-fa5335545ea4"
+
+
+
+UUID=DA2C19372C190FDD /media/WINDOWS ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+
+
+UUID=7CFC8992FC8946FC /media/USER_FOLDERS ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+
+#dans fstab
+
+UUID=56242B3E242B208B /media/Data  ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+

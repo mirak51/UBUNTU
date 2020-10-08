@@ -1,0 +1,16 @@
+
+
+
+
+
+
+Shared folders for file transfers between host and VM are accessible by mounting them using mount_vboxvfs. A shared folder can be created on the host using the VirtualBox GUI or via vboxmanage. For example, to create a shared folder called myshare under /mnt/bsdboxshare for the VM named BSDBox, run:
+
+# vboxmanage sharedfolder add 'BSDBox' --name myshare --hostpath /mnt/bsdboxshare
+
+
+
+
+Note that the shared folder name must not contain spaces. Mount the shared folder from within the guest system like this:
+
+# mount_vboxvfs -w myshare /mnt
